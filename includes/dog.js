@@ -84,7 +84,7 @@ class Dog{
 		@returns: the jquery dom element of the dog to be appended by the caller
 	render(){
 	*/
-	bark(message = 'bark bark', time = 3000){
+	bark(message = 'bark bark', time = 1000){
 		if(this.barkBubble){
 			this.barkBubble.remove();
 		}
