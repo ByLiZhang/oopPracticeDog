@@ -9,7 +9,6 @@ class PetGame{
 		
 		this.dog = new Dog('Duker', 'dog');
 		this.renderValue = this.dog.render();
-		console.log(this.renderValue);
 		$('#gameArea').append(this.renderValue);
 		this.attachHandlers();
 
@@ -21,7 +20,7 @@ class PetGame{
 	handleBoardClick(event){
 		//call the dog's move method.  Give it an object with an x and y property.  You can get the x/y coordinate from the event variable (it is available by default in an event handler)
 		console.log(event);
-		let destination = {x:event.clientX, y: event.clientY};
+		let destination = {x:event.pageX, y: event.pageY};
 		this.dog.move(destination, 1000, this.handleMovementFinished.bind(this));
 		// this.dog.MovementComplete(this.dog.handleMovementFinished);
 
